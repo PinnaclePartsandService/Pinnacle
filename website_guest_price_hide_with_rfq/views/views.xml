@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="quote_type_view">
+            <field name="name">quote type</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="sale.product_template_form_view"/>
+            <field name="arch" type="xml">
+               <xpath expr="//label[@for='purchase_ok']" position="after">
+                  <div>
+                     <field name="enable_rfq"/>
+                     <label for="enable_rfq"/>
+                </div>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="crm_lead_view_form_inherit" model="ir.ui.view">
+            <field name="name">crm.lead.view.form.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='team_id']" position="after">
+                    <field name="user_name"/>
+                    <field name="lead_product_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_config_settings_view_form_inherit" model="ir.ui.view">
+            <field name="name">guest user</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='website_selection_settings']" position="after">
+                    <h2>Website Hide Price &amp; RFQ Settings</h2>
+                    <div class="row mt16 o_settings_container" id="website_hide_price">
+                        <div class="col-12 o_setting_box" groups="website.group_multi_website">
+                            <div class="o_setting_left_pane">
+                                <field name="is_guest_user"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="is_guest_user"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" groups="website.group_multi_website">
+                            <div class="o_setting_right_pane">
+                                <div attrs="{'invisible': [('is_guest_user', '=', False)]}" class="content-group">
+                                    <div class="row mt16">
+                                        <label class="col-lg-3 o_light_label" for="guest_user_notice"/>
+                                        <field name="guest_user_notice"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 o_setting_box" groups="website.group_multi_website">
+                            <div class="o_setting_left_pane">
+                                <field name="is_login_user"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="is_login_user"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" groups="website.group_multi_website">
+                            <div class="o_setting_right_pane">
+                                <div attrs="{'invisible': [('is_login_user', '=', False)]}" class="content-group">
+                                    <div class="row mt16">
+                                        <label class="col-lg-3 o_light_label" for="login_user_notice"/>
+                                        <field name="login_user_notice"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 o_setting_box" groups="website.group_multi_website">
+                            <div class="o_setting_left_pane">
+                                <field name="product_enable_rfq"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="product_enable_rfq"/>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

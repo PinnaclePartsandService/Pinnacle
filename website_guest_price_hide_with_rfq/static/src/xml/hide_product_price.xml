@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="website_sale.productsRecentlyViewed">
+        <t t-jquery="div.o_carousel_product_card_footer" t-operation="replace">
+            <t t-if="is_login_user == true">
+            </t>
+            <t t-elif="is_login_user == false and login == false and is_guest_user == true">
+            </t>
+            <t t-elif="is_login_user == false and is_guest_user == false and login == true and product_enable_rfq == true or product['enable_rfq']  == true">
+            </t>
+            <t t-else="is_login_user == false and is_guest_user == false and login == true or login == false and product_enable_rfq == true or product['enable_rfq'] == false">
+                <div class="o_carousel_product_card_footer card-footer d-flex align-items-center">
+                    <div class="d-block font-weight-bold" t-raw="product.price"/>
+                    <button type="button" role="button" class="btn btn-primary js_add_cart ml-auto" title="Add to Cart">
+                        <i class="fa fa-fw fa-shopping-cart"/>
+                    </button>
+                </div>
+            </t>
+        </t>
+    </t>
+
+    <t t-extend="website_sale.productsSearchBar.autocomplete">
+        <t t-jquery="div.flex-shrink-0" t-operation="replace">
+            <t t-if="is_login_user == true">
+            </t>
+            <t t-elif="is_login_user == false and login == false and is_guest_user == true">
+            </t>
+            <t t-elif="is_login_user == false and is_guest_user == false and login == true and product_enable_rfq == true or product['enable_rfq']  == true">
+            </t>
+            <t t-else="is_login_user == false and is_guest_user == false and login == true or login == false and product_enable_rfq == false or product['enable_rfq'] == false">
+                <div t-if="widget.displayPrice" class="flex-shrink-0">
+                    <t t-if="product['has_discounted_price']">
+                        <span class="text-danger text-nowrap" style="text-decoration: line-through;">
+                            <t t-raw="product['list_price']"/>
+                        </span>
+                        <br/>
+                    </t>
+                    <b class="text-nowrap">
+                        <t t-raw="product['price']"/>
+                    </b>
+                </div>
+            </t>
+        </t>
+    </t>
+
+</templates>

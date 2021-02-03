@@ -1,0 +1,104 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_guest_price_hide
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-19 04:49+0000\n"
+"PO-Revision-Date: 2020-11-19 04:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.get_product_qv_details_template_inherit
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.guest_request_form
+msgid "<i class=\"fa fa-shopping-cart\"/> Add to Cart"
+msgstr "<i class=\"fa fa-shopping-cart\"/> In den Warenkorb"
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.as_products_add_to_cart
+msgid "<span class=\"fa fa-shopping-cart\"/> <span>Add to Cart</span>"
+msgstr "<span class=\"fa fa-shopping-cart\"/> <span>In den Warenkorb</span>"
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.get_product_qv_details_template_inherit
+msgid "Add one"
+msgstr "Füge eins hinzu"
+
+#. module: website_guest_price_hide
+#. openerp-web
+#: code:addons/website_guest_price_hide/static/src/xml/hide_product_price.xml:0
+#, python-format
+msgid "Add to Cart"
+msgstr "In den Warenkorb"
+
+#. module: website_guest_price_hide
+#: model:ir.model,name:website_guest_price_hide.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: website_guest_price_hide
+#: model:ir.model.fields,field_description:website_guest_price_hide.field_res_config_settings__guest_user_notice
+#: model:ir.model.fields,field_description:website_guest_price_hide.field_website__guest_user_notice
+msgid "Guest User Notice"
+msgstr "Gastbenutzerhinweis"
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.res_config_settings_view_form_inherit
+msgid "Guest User Settings"
+msgstr "Gastbenutzereinstellungen"
+
+#. module: website_guest_price_hide
+#: model:ir.model.fields,field_description:website_guest_price_hide.field_res_config_settings__is_guest_user
+#: model:ir.model.fields,field_description:website_guest_price_hide.field_website__is_guest_user
+msgid "Guest User hide price"
+msgstr "Gastbenutzer verstecken Preis"
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.guest_request_form
+msgid "Login For Price"
+msgstr "Login für Preis"
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.get_product_qv_details_template_inherit
+msgid "Remove one"
+msgstr "Entfernen Sie eine"
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.share_icons_product
+msgid "Share This"
+msgstr "Teile das"
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.as_products_add_to_cart
+msgid "Shopping cart"
+msgstr "Einkaufswagen"
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.get_product_qv_details_template_inherit
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.guest_request_form
+msgid "This combination does not exist."
+msgstr "Diese Kombination existiert nicht."
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.get_product_qv_details_template_inherit
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.guest_request_form
+msgid "This product has no valid combination."
+msgstr "Dieses Produkt hat keine gültige Kombination."
+
+#. module: website_guest_price_hide
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.get_product_qv_details_template_inherit
+#: model_terms:ir.ui.view,arch_db:website_guest_price_hide.guest_request_form
+msgid "This product is no longer available."
+msgstr "Dieses Produkt ist nicht länger verfügbar."
+
+#. module: website_guest_price_hide
+#: model:ir.model,name:website_guest_price_hide.model_website
+msgid "Website"
+msgstr "Webseite"
